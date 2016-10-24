@@ -8,4 +8,5 @@ public class mojBlad extends Exception {
 
         return "twoj wlasny bląd";
     }
+
 }

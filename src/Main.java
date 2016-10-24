@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.Scanner;
 public class Main {
 
@@ -24,7 +26,10 @@ public class Main {
             samochod vw = new samochod(moc, cena,kolor,spalanie);
 
             System.out.println("VW cena: "+vw.cena);
-            System.out.println("Koszt przy 234 km: "+vw.paliwo(234,4.56));
+            System.out.println("Koszt przy 234 km: "+vw.paliwo(100,4.56));
+            PrintWriter file = new PrintWriter("plik.txt");
+            file.println("Cena: "+cena+", Moc: "+moc+"spalanie: "+spalanie+"Koszt przy 100 km: "+vw.paliwo(100,4.56));
+            file.close();
         }
         catch (Exception e) {
             System.out.println("podales zle dane");
